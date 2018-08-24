@@ -10,3 +10,18 @@ body,
 .app {
   background: white;
 }
+
+.marker-title {
+  margin-right: -50%;
+  width: 200px;
+  display: block;
+  position: relative;
+  right: 90px;
+  text-align: center;
+  top: 20px;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid;
+}

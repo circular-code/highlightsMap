@@ -3,20 +3,20 @@
     {
       "name": "Wilhelma",
       "image": "",
-      "lat": "48.8045133",
-      "lng": "9.2040486"
+      "lat": "48.8039187",
+      "lng": "9.2080606"
     },
     {
       "name": "Weissenhofsiedlung",
       "image": "",
-      "lat": "48.8007363",
-      "lng": "9.1749257"
+      "lat": "48.800637",
+      "lng": "9.1769652"
     },
     {
       "name": "Staatsgalerie Stuttgart",
       "image": "",
-      "lat": "48.7810588",
-      "lng": "9.172067"
+      "lat": "48.7799071",
+      "lng": "9.1859166"
     },
     {
       "name": "Killesberg",
@@ -25,10 +25,10 @@
       "lng": "9.1632518"
     },
     {
-      "name": "Mercedes-Benz Arena",
+      "name": "Mercedes-Benz Arena Stuttgart",
       "image": "",
-      "lat": "48.7907629",
-      "lng": "9.20792"
+      "lat": "48.7923639",
+      "lng": "9.2309251"
     }
   ]
 }

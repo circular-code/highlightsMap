@@ -12,12 +12,12 @@ export default class Map extends Component {
     zoom: 13.75
   };
 
-  createMapOptions = () => {
+  createMapOptions() {
     return {
       // created with https://mapstyle.withgoogle.com/
       styles: Styles
     };
-  };
+  }
 
   setPlaces(places) {
     let placesComponentArr = [];
@@ -25,7 +25,12 @@ export default class Map extends Component {
     for (let place in places) {
       places[place].forEach(data =>
         placesComponentArr.push(
-          <Marker name={data.name} lat={data.lat} lng={data.lng} />
+          <Marker
+            key={data.name}
+            name={data.name}
+            lat={data.lat}
+            lng={data.lng}
+          />
         )
       );
     }
