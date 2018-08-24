@@ -2,6 +2,7 @@ import React from "react";
 // import { Route } from "react-router-dom";
 import Map from "./Map";
 import ListView from "./ListView";
+import Info from "./Info";
 import Places from "./places.json";
 import "./App.css";
 
@@ -36,7 +37,7 @@ class App extends React.Component {
 
   selectPlace = value => {
     this.setState(state => {
-      // select results
+      // select result
       state.places
         .filter(place => {
           return ~place.name.indexOf(value);
@@ -44,7 +45,7 @@ class App extends React.Component {
         .forEach(place => {
           if (place.selected) place.selected = false;
           else {
-            // reset selection, so only ony place is selected at the same time
+            // clear selection, so only ony place is selected at the same time
             state.places.forEach(oldPlace => {
               oldPlace.selected = false;
             });
@@ -65,6 +66,7 @@ class App extends React.Component {
           filterPlaces={this.filterPlaces}
           selectPlace={this.selectPlace}
         />
+        <Info place={this.state.places.filter(place => place.selected)} />;
       </div>
     );
   }
