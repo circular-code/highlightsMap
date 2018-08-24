@@ -1,54 +1,22 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import ListBooks from "./ListBooks";
-import SearchBooks from "./SearchBooks";
-import * as BooksAPI from "./BooksAPI";
+// import { Route } from "react-router-dom";
+import Map from "./Map";
 import "./App.css";
 
-class BooksApp extends React.Component {
-  state = {
-    books: []
-  };
+class App extends React.Component {
+  state = {};
 
-  componentDidMount() {
-    BooksAPI.getAll().then(books => {
-      this.setState({ books });
-    });
-  }
+  componentDidMount() {}
 
-  onOptionChanged = (book, shelf) => {
-    BooksAPI.update(book, shelf);
-    BooksAPI.getAll().then(books => {
-      this.setState({ books });
-    });
-  };
+  onOptionChanged = () => {};
 
   render() {
     return (
       <div className="app">
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <ListBooks
-              books={this.state.books}
-              onOptionChanged={this.onOptionChanged}
-            />
-          )}
-        />
-        <Route
-          path="/search"
-          render={({ history }) => (
-            <SearchBooks
-              books={this.state.books}
-              onOptionChanged={this.onOptionChanged}
-              bookState={this.state}
-            />
-          )}
-        />
+        <Map />
       </div>
     );
   }
 }
 
-export default BooksApp;
+export default App;
