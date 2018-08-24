@@ -1,6 +1,7 @@
 import React from "react";
 // import { Route } from "react-router-dom";
 import Map from "./Map";
+import Places from "./places.json";
 import "./App.css";
 
 class App extends React.Component {
@@ -13,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Map />
+        <Map places={Places} />
       </div>
     );
   }

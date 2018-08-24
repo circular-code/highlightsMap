@@ -1,14 +1,27 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
+import Marker from "./Marker";
 
 export default class Map extends Component {
   static defaultProps = {
     center: {
-      lat: 48.894,
-      lng: 9.187
+      lat: 48.7819963,
+      lng: 9.1632948
     },
-    zoom: 15
+    zoom: 13.75
   };
+
+  setPlaces(places) {
+    let placesComponentArr = [];
+    for (let place in this.props.places) {
+      places[place].forEach(data =>
+        placesComponentArr.push(
+          <Marker name={data.name} lat={data.lat} lng={data.lng} />
+        )
+      );
+    }
+    return placesComponentArr;
+  }
 
   render() {
     return (
@@ -18,11 +31,7 @@ export default class Map extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          {/* <AnyReactComponent
-            lat={59.955413}
-            lng={30.337844}
-            text={"Kreyser Avrora"}
-          /> */}
+          {this.setPlaces(this.props.places)}
         </GoogleMapReact>
       </div>
     );
