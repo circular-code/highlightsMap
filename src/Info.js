@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FlickrImages from "./FlickrImages";
 
 export default class Info extends Component {
   render() {
@@ -21,7 +22,10 @@ export default class Info extends Component {
               <span>{place.lng}</span>
             </p>
           </div>
-          <div className="info-window-image-container">No Images available</div>
+          <FlickrImages
+            getFlickrImages={this.props.getFlickrImages}
+            images={place.images}
+          />
         </div>
       );
     else return "";
