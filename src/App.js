@@ -5,7 +5,7 @@ import Places from "./places.json";
 import "./App.css";
 
 class App extends React.Component {
-  state = {};
+  state = { places: Places };
 
   componentDidMount() {}
 
@@ -14,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Map places={Places} />
+        <Map places={this.state.places} />
       </div>
     );
   }

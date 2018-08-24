@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
+import Styles from "./mapStyles.json";
 
 export default class Map extends Component {
   static defaultProps = {
@@ -11,9 +12,17 @@ export default class Map extends Component {
     zoom: 13.75
   };
 
+  createMapOptions = () => {
+    return {
+      // created with https://mapstyle.withgoogle.com/
+      styles: Styles
+    };
+  };
+
   setPlaces(places) {
     let placesComponentArr = [];
-    for (let place in this.props.places) {
+
+    for (let place in places) {
       places[place].forEach(data =>
         placesComponentArr.push(
           <Marker name={data.name} lat={data.lat} lng={data.lng} />
@@ -30,6 +39,7 @@ export default class Map extends Component {
           bootstrapURLKeys={{ key: "AIzaSyB-972nHwM4RrE1OWp-f1yoyYfyRLCZI48" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
+          options={this.createMapOptions}
         >
           {this.setPlaces(this.props.places)}
         </GoogleMapReact>
