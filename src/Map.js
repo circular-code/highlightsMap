@@ -19,21 +19,21 @@ export default class Map extends Component {
     };
   }
 
-  setPlaces(places) {
+  setPlaces(places, selectPlace) {
     let placesComponentArr = [];
 
-    for (let place in places) {
-      places[place].forEach(data =>
-        placesComponentArr.push(
-          <Marker
-            key={data.name}
-            name={data.name}
-            lat={data.lat}
-            lng={data.lng}
-          />
-        )
-      );
-    }
+    places.forEach(data =>
+      placesComponentArr.push(
+        <Marker
+          key={data.name}
+          name={data.name}
+          lat={data.lat}
+          lng={data.lng}
+          selected={data.selected}
+          selectPlace={selectPlace}
+        />
+      )
+    );
     return placesComponentArr;
   }
 
@@ -46,7 +46,10 @@ export default class Map extends Component {
           defaultZoom={this.props.zoom}
           options={this.createMapOptions}
         >
-          {this.setPlaces(this.props.places)}
+          {this.setPlaces(
+            this.props.places.filter(place => place.visible === true),
+            this.props.selectPlace
+          )}
         </GoogleMapReact>
       </div>
     );

@@ -11,6 +11,10 @@ body,
   background: white;
 }
 
+.marker {
+  cursor: pointer;
+}
+
 .marker-title {
   margin-right: -50%;
   width: 200px;
@@ -24,4 +28,22 @@ body,
   border-radius: 5px;
   color: black;
   border: 1px solid;
+}
+
+#listview {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  background: white;
+  padding: 3rem;
+  width: 30vw;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style-type: none;
+}
+
+.marker.selected {
+  background-color: aqua !important;
 }

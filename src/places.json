@@ -1,34 +1,42 @@
-{
-  "places": [
-    {
-      "name": "Wilhelma",
-      "image": "",
-      "lat": "48.8039187",
-      "lng": "9.2080606"
-    },
-    {
-      "name": "Weissenhofsiedlung",
-      "image": "",
-      "lat": "48.800637",
-      "lng": "9.1769652"
-    },
-    {
-      "name": "Staatsgalerie Stuttgart",
-      "image": "",
-      "lat": "48.7799071",
-      "lng": "9.1859166"
-    },
-    {
-      "name": "Killesberg",
-      "image": "",
-      "lat": "48.8027724",
-      "lng": "9.1632518"
-    },
-    {
-      "name": "Mercedes-Benz Arena Stuttgart",
-      "image": "",
-      "lat": "48.7923639",
-      "lng": "9.2309251"
-    }
-  ]
-}
+[
+  {
+    "name": "Wilhelma",
+    "image": "",
+    "lat": "48.8039187",
+    "lng": "9.2080606",
+    "visible": true,
+    "selected": false
+  },
+  {
+    "name": "Weissenhofsiedlung",
+    "image": "",
+    "lat": "48.800637",
+    "lng": "9.1769652",
+    "visible": true,
+    "selected": false
+  },
+  {
+    "name": "Staatsgalerie Stuttgart",
+    "image": "",
+    "lat": "48.7799071",
+    "lng": "9.1859166",
+    "visible": true,
+    "selected": false
+  },
+  {
+    "name": "Killesberg",
+    "image": "",
+    "lat": "48.8027724",
+    "lng": "9.1632518",
+    "visible": true,
+    "selected": false
+  },
+  {
+    "name": "Mercedes-Benz Arena Stuttgart",
+    "image": "",
+    "lat": "48.7923639",
+    "lng": "9.2309251",
+    "visible": true,
+    "selected": false
+  }
+]
