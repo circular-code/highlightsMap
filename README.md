@@ -36,7 +36,7 @@ _Build Server_
 
 **Filter Places**
 
-1. On the left part of the page, you will see an input. You can enter a name of a place you want to find, and the list will be filtered accordingly.
+1. On the left part of the page, you will see an input. You can enter a name of a place you want to find, and the list and places on the map will be filtered accordingly.
 2. You can tab with the tab key between the input and the items in the list.
 3. Select a focused place by pressing the enter key.
 4. Additional information will be shown, which can now also be accesed by tabbing (after the list of places).
