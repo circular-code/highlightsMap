@@ -1,25 +1,24 @@
 import React from "react";
 
 function FlickrImage(props) {
-  console.log(props);
+  // build url
   return (
-    <img
-      alt="from flickr"
-      src={`https://farm${props.farm}.staticflickr.com/${props.server}/${
-        props.id
-      }_${props.secret}.jpg`}
-    />
+    <a
+      href={`https://farm${props.data.farm}.staticflickr.com/${
+        props.data.server
+      }/${props.data.id}_${props.data.secret}.jpg`}
+    >
+      <img
+        alt={props.data.title}
+        src={`https://farm${props.data.farm}.staticflickr.com/${
+          props.data.server
+        }/${props.data.id}_${props.data.secret}.jpg`}
+      />
+    </a>
   );
 }
 
 export default FlickrImage;
-
-// build image link
-
-// 	or
-// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
-// 	or
-// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{o-secret}_o.(jpg|gif|png)
 
 // "id":"5340131446",
 // "owner":"58130019@N08",

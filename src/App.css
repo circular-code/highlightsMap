@@ -31,12 +31,14 @@ body,
 }
 
 #listview {
-  position: fixed;
+  position: absolute;
   left: 1rem;
   top: 1rem;
   background: white;
-  padding: 3rem;
+  padding: 1.5rem;
   width: 30vw;
+  height: 30vh;
+  overflow: auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -53,13 +55,19 @@ ul {
 }
 
 .info-window {
-  position: fixed;
+  position: absolute;
   left: 1rem;
-  top: 24rem;
+  top: calc(30vh + 2rem);
   background: white;
-  padding: 3rem;
+  padding: 1.5rem;
   width: 30vw;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.info-window img {
+  width: 100%;
 }
 
 ul {
@@ -76,4 +84,17 @@ li {
   border: 2px solid transparent;
   padding: 0.3rem 1rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .info-window,
+  #listview {
+    padding: 0.5rem;
+    width: 40vw;
+    font-size: 0.6rem;
+  }
+
+  input {
+    font-size: 0.6rem;
+  }
 }

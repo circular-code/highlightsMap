@@ -58,25 +58,19 @@ class App extends React.Component {
   };
 
   getFlickrImages = name => {
-    // const headers = {
-    //   Accept: "application/json"
-    // };
-
-    //TODO: herausfinden was das sein soll App.js:65 HTTP-Based Public Key Pinning is deprecated. Chrome 69 and later will ignore HPKP response headers. (Host: api.flickr.com)
-
+    // get flickr images based on selected place
     fetch(
       `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=1168a8d14d15b7e5ebbcb9b6ab91abf2&text=${name}&sort=relevance&privacy_filter=1&safe_search=1&per_page=5&page=1&format=json&nojsoncallback=1`
-      // { headers }
     )
       .then(data => data.json())
       .then(data => {
-        console.log(data);
         this.setState(state => {
+          // store downloaded images in images array of place
           var filteredPlace = state.places.filter(place => {
             return place.name === name;
           });
 
-          filteredPlace.images = data && data.photos && data.photos.photo;
+          filteredPlace[0].images = data && data.photos && data.photos.photo;
           return state;
         });
       });
@@ -95,7 +89,6 @@ class App extends React.Component {
           place={this.state.places.filter(place => place.selected)}
           getFlickrImages={this.getFlickrImages}
         />
-        ;
       </div>
     );
   }
