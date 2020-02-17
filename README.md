@@ -2,7 +2,7 @@ _This project was bootstrapped with [Create React App](https://github.com/facebo
 
 # Highlights Map
 
-A Google Maps React Application for the Udacity Front End Nanodegree program showing cool places in my area.
+A Google Maps React Application showing a few cool places in my area and loading impressions from flickr api feed.
 
 ## Getting started
 
@@ -41,10 +41,6 @@ _Build Server_
 3. Select a focused place by pressing the enter key.
 4. Additional information will be shown, which can now also be accesed by tabbing (after the list of places).
 
-## License
-
-None.
-
 ## Dependencies
 
 The following dependencies have been used to build this project.
@@ -55,7 +51,3 @@ Make sure to run `npm install` before launching the project.
 - [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [Udacity Books API](https://reactnd-books-api.udacity.com)
 - [Google Map React](https://github.com/google-map-react/google-map-react)
-
-## Contributing
-
-This repository is a student project for udacity FEND. Contributions are not intended.
